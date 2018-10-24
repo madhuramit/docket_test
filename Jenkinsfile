@@ -14,6 +14,7 @@ node {
        echo "Path is:$PATH"
 
        docker.withTool("docker"){
+       docker-machine start
 
 
         app =docker.build("getintodevops/hellonode")
