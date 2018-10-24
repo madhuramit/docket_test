@@ -12,7 +12,6 @@ node {
          * docker build on the command line */
        PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
        echo "Path is:$PATH"
-       docker-machine start
 
        docker.withTool("docker"){
 
