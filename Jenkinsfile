@@ -13,7 +13,11 @@ node {
        PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
        echo "Path is:$PATH"
 
+       docker.withTool("default"){
+
+
         app =docker.build("getintodevops/hellonode")
+       }
     }
 
     stage('Test image') {
