@@ -1,6 +1,10 @@
 node {
     def app
 
+    environment {
+       PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
+     }
+
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
