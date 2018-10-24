@@ -1,11 +1,6 @@
 node {
     def app
 
-    environment {
-       PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
-       echo $PATH
-     }
-
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -15,6 +10,8 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
+       PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
+       echo "Path is:$PATH"
 
         app =docker.build("getintodevops/hellonode")
     }
