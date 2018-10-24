@@ -3,6 +3,7 @@ node {
 
     environment {
        PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
+       echo $PATH
      }
 
     stage('Clone repository') {
