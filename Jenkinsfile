@@ -12,8 +12,8 @@ node {
          * docker build on the command line */
        PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
        echo "Path is:$PATH"
-       sh "docker-machine restart" +
-       "eval \$(docker-machine env default)"
+       sh "/Applications/Docker.app/Contents/Resources/bin/docker-machine restart \n" +
+       "eval \$(/Applications/Docker.app/Contents/Resources/bin/docker-machine env default)"
 
        docker.withTool("docker"){
 
