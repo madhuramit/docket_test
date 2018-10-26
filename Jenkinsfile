@@ -13,7 +13,7 @@ node {
        PATH = "/Applications/Docker.app/Contents/Resources/bin:$PATH"
        echo "Path is:$PATH"
        sh "/Applications/Docker.app/Contents/Resources/bin/docker-machine stop \n" +
-       "/Applications/Docker.app/Contents/Resources/bin/docker-machine start \n" +
+       "/Applications/Docker.app/Contents/Resources/bin/docker-machine create default \n" +
        "eval \$(/Applications/Docker.app/Contents/Resources/bin/docker-machine env default)"
 
        docker.withTool("docker"){
